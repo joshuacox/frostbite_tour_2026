@@ -9956,6 +9956,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pure-snow.js@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "pure-snow.js@npm:2.1.0"
+  checksum: 8053fb60a67661c319087906429045caf4476cdc013706d0f39273eef726320c07a7a18a35e3659df8d38740059d86432864e9398eb9cbfcae2f580b01fa5074
+  languageName: node
+  linkType: hard
+
 "qs@npm:^6.5.1":
   version: 6.14.1
   resolution: "qs@npm:6.14.1"
@@ -11612,6 +11619,7 @@ __metadata:
     postcss: ^8.5.6
     prettier: ^3.8.1
     prettier-plugin-tailwindcss: ^0.7.2
+    pure-snow.js: ^2.1.0
     react: 19.2.4
     react-dom: 19.2.4
     reading-time: 1.5.0

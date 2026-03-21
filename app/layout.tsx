@@ -11,6 +11,10 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
+import SnowEffect from '@/components/SnowEffect';
+//import Snowfall from 'react-snowfall';
+// import { createSnow, showSnow } from "pure-snow.js"
+// import Script from 'next/script'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -60,6 +64,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const basePath = process.env.BASE_PATH || ''
+  //createSnow(); // creates snowflakes and generate css for them
+  //showSnow(true); // snow can be disabled using showSnow function
 
   return (
     <html
@@ -67,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${space_grotesk.variable} scroll-smooth`}
       suppressHydrationWarning
     >
+      <SnowEffect />
       <link
         rel="apple-touch-icon"
         sizes="76x76"
@@ -100,12 +107,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SectionContainer>
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
               <Header />
-              <main className="mb-auto">{children}</main>
+              <div id="snow" >
+                <main className="mb-auto">{children}</main>
+              </div>
             </SearchProvider>
             <Footer />
           </SectionContainer>
         </ThemeProviders>
       </body>
-    </html>
+    </html >
   )
 }

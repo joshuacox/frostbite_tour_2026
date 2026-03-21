@@ -32,6 +32,7 @@
     "pure-snow.js": "^2.1.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "react-snowfall": "^2.4.0",
     "reading-time": "1.5.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-citation": "^2.3.2",

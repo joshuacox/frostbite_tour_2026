@@ -1,4 +1,4 @@
-"use client"; // Required for hooks and browser APIs
+"use client"
 
 import Snowfall from 'react-snowfall';
 

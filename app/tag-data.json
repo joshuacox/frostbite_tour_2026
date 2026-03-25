@@ -1,6 +1,6 @@
 {
-  "frostbite": 6,
-  "alberta": 2,
+  "frostbite": 8,
+  "alberta": 4,
   "snowboarding": 4,
   "montana": 1,
   "wyoming": 1,
@@ -14,8 +14,6 @@
   "math": 1,
   "ols": 1,
   "github": 1,
-  "hello": 1,
-  "tailwind": 2,
   "writings": 1,
   "book": 1,
   "reflection": 1,

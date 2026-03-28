@@ -1,8 +1,15 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Snowfall from 'react-snowfall'
 
 export default function SnowEffect() {
+  const [isClient, setIsClient] = useState(false)
+ 
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   return (
     <Snowfall
       color="white"

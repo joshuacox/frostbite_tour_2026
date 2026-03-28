@@ -2789,6 +2789,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@namnguyenthanhwork/react-snowfall-effect@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@namnguyenthanhwork/react-snowfall-effect@npm:1.0.3"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: e9df53a9b677a2e3cc2c5192f960f3421372b8a7aa5c3ecddb083953bcc1d5d41a94a0059027a44332a8c6ff4aa8159c6f9ec7cb54c2f39bb7d8a5f388746ae3
+  languageName: node
+  linkType: hard
+
 "@napi-rs/wasm-runtime@npm:^0.2.11":
   version: 0.2.12
   resolution: "@napi-rs/wasm-runtime@npm:0.2.12"
@@ -9956,13 +9966,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pure-snow.js@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "pure-snow.js@npm:2.1.0"
-  checksum: 8053fb60a67661c319087906429045caf4476cdc013706d0f39273eef726320c07a7a18a35e3659df8d38740059d86432864e9398eb9cbfcae2f580b01fa5074
-  languageName: node
-  linkType: hard
-
 "qs@npm:^6.5.1":
   version: 6.14.1
   resolution: "qs@npm:6.14.1"
@@ -9990,29 +9993,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-fast-compare@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "react-fast-compare@npm:3.2.2"
-  checksum: 2071415b4f76a3e6b55c84611c4d24dcb12ffc85811a2840b5a3f1ff2d1a99be1020d9437ee7c6e024c9f4cbb84ceb35e48cf84f28fcb00265ad2dfdd3947704
-  languageName: node
-  linkType: hard
-
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
-  languageName: node
-  linkType: hard
-
-"react-snowfall@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "react-snowfall@npm:2.4.0"
-  dependencies:
-    react-fast-compare: ^3.2.2
-  peerDependencies:
-    react: ^16.8 || 17.x || 18.x || 19.x
-    react-dom: ^16.8 || 17.x || 18.x || 19.x
-  checksum: feb51e4780af1dd42d57ac6828d63c8c10e7d838d08ff700a8cfd31340e971da5e2eda16ac6fb6a1e6491799b55dd737c2cb489622d8df3e4f60d4beb813b0de
   languageName: node
   linkType: hard
 
@@ -11607,6 +11591,7 @@ __metadata:
     "@eslint/eslintrc": ^3.3.3
     "@eslint/js": ^9.18.0
     "@headlessui/react": 2.2.9
+    "@namnguyenthanhwork/react-snowfall-effect": ^1.0.3
     "@next/bundle-analyzer": 15.5.12
     "@svgr/webpack": ^8.1.0
     "@tailwindcss/forms": ^0.5.11
@@ -11638,10 +11623,8 @@ __metadata:
     postcss: ^8.5.6
     prettier: ^3.8.1
     prettier-plugin-tailwindcss: ^0.7.2
-    pure-snow.js: ^2.1.0
     react: 19.2.4
     react-dom: 19.2.4
-    react-snowfall: ^2.4.0
     reading-time: 1.5.0
     rehype-autolink-headings: ^7.1.0
     rehype-citation: ^2.3.2

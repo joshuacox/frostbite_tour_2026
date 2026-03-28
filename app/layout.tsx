@@ -11,10 +11,7 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
-import SnowEffect from '@/components/SnowEffect'
-//import Snowfall from 'react-snowfall';
-// import { createSnow, showSnow } from "pure-snow.js"
-// import Script from 'next/script'
+import { Snowfall } from '@namnguyenthanhwork/react-snowfall-effect';
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -64,8 +61,6 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const basePath = process.env.BASE_PATH || ''
-  //createSnow(); // creates snowflakes and generate css for them
-  //showSnow(true); // snow can be disabled using showSnow function
 
   return (
     <html
@@ -73,7 +68,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${space_grotesk.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <SnowEffect />
+    <Snowfall
+      colors={['#ffffff', '#dfdbe0', '#ddf0ff', '#dfe6ff']}
+      snowflakeShape='dot'
+      size={{ min: 1, max: 15 }}
+      followMouse={true}
+      snowflakeCount={60}
+      wind={{ min: -0.8, max: 0.8 }}
+      accumulate={false}
+      melt={true}
+      // Beautiful star-shaped snowflakes with mouse interaction
+    />
       <link
         rel="apple-touch-icon"
         sizes="76x76"

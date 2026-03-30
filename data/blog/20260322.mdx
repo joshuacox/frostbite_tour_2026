@@ -6,17 +6,11 @@ draft: false
 summary: Lake Louise, AB
 ---
 
-import dynamic from 'next/dynamic';
 
-const Map = dynamic(
-  () => import('@/components/Map'),
-  {
-    loading: () => <p>A map is loading</p>,
-    ssr: false
-  }
-), [])
+import DynamicMap from '@/components/DynamicMap'
+
 const position = [51.41723833646719, -116.2169124596305]
 
-<Map position={position} zoom='13' />
+<DynamicMap position={position} zoom='13' />
 
 https://www.lakelouiseinn.com

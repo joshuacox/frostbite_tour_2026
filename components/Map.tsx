@@ -6,10 +6,10 @@ import "leaflet/dist/leaflet.css"
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css"
 
 export default function MyMap(props: any) {
-	const { position, zoom } = props
+	const { style, position, zoom } = props
 
 	return <MapContainer
-		style={{ height: "1000px", width: '100%' }}
+		style={style}
 		center={position}
 		zoom={zoom}
 		scrollWheelZoom={false}

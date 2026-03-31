@@ -13,6 +13,13 @@ import PostBanner from '@/layouts/PostBanner'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
+import DynamicMap from '@/components/DynamicMap'
+
+const mdxComponents = {
+  ...components,
+  DynamicMap, // This allows you to use <DynamicMap /> inside your .mdx files
+  // ... other components like Image, CustomLink, etc.
+};
 
 const defaultLayout = 'PostLayout'
 const layouts = {
@@ -113,7 +120,7 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
-        <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
+        <MDXLayoutRenderer code={post.body.code} components={mdxComponents} toc={post.toc} />
       </Layout>
     </>
   )

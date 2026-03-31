@@ -1,14 +1,15 @@
+"use client";
 // src/components/Map.tsx
 import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet"
-import "leaflet/dist/leaflet.css"
 import "leaflet-defaulticon-compatibility"
+import "leaflet/dist/leaflet.css"
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css"
 
 export default function MyMap(props: any) {
 	const { position, zoom } = props
 
 	return <MapContainer
-		style={{ height: '1000px', width: '100%' }}
+		style={{ height: "1000px", width: '100%' }}
 		center={position}
 		zoom={zoom}
 		scrollWheelZoom={false}

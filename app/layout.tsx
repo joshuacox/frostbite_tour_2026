@@ -68,17 +68,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${space_grotesk.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-    <Snowfall
-      colors={['#ffffff', '#dfdbe0', '#ddf0ff', '#dfe6ff']}
-      snowflakeShape='dot'
-      size={{ min: 1, max: 15 }}
-      followMouse={true}
-      snowflakeCount={60}
-      wind={{ min: -0.8, max: 0.8 }}
-      accumulate={false}
-      melt={true}
-      // Beautiful star-shaped snowflakes with mouse interaction
-    />
+      {/* <Snowfall */}
+      {/*   colors={['#ffffff', '#dfdbe0', '#ddf0ff', '#dfe6ff']} */}
+      {/*   snowflakeShape='dot' */}
+      {/*   size={{ min: 1, max: 15 }} */}
+      {/*   followMouse={true} */}
+      {/*   snowflakeCount={60} */}
+      {/*   wind={{ min: -0.8, max: 0.8 }} */}
+      {/*   accumulate={false} */}
+      {/*   melt={true} */}
+      {/*   // Beautiful star-shaped snowflakes with mouse interaction */}
+      {/* /> */}
       <link
         rel="apple-touch-icon"
         sizes="76x76"

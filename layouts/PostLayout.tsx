@@ -1,4 +1,3 @@
-"use client";
 import { ReactNode } from 'react'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog, Authors } from 'contentlayer/generated'
@@ -10,8 +9,8 @@ import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import dynamic from 'next/dynamic';
-import { useMemo } from 'react';
+//import dynamic from 'next/dynamic';
+//import { useMemo } from 'react';
 
 const editUrl = (path) => `${siteMetadata.siteRepo}/blob/main/data/${path}`
 const discussUrl = (path) =>
@@ -35,14 +34,6 @@ interface LayoutProps {
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
   const { filePath, path, slug, date, title, tags } = content
   const basePath = path.split('/')[0]
-  const Map = useMemo(() => dynamic(
-    () => import('@/components/Map'),
-    {
-      loading: () => <p>A map is loading</p>,
-      ssr: false
-    }
-  ), [])
-  const position = [1.41723833646719, -6.2169124596305]
 
   return (
     <SectionContainer>
@@ -106,7 +97,6 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
             </dl>
             <div className="divide-y divide-gray-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-700">
 
-              <Map position={position} zoom='13' />
               <div className="prose dark:prose-invert max-w-none pt-10 pb-8">{children}</div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(path)} rel="nofollow">

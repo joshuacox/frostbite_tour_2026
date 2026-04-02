@@ -2846,6 +2846,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/mdx@npm:^16.2.2":
+  version: 16.2.2
+  resolution: "@next/mdx@npm:16.2.2"
+  dependencies:
+    source-map: ^0.7.0
+  peerDependencies:
+    "@mdx-js/loader": ">=0.15.0"
+    "@mdx-js/react": ">=0.15.0"
+  peerDependenciesMeta:
+    "@mdx-js/loader":
+      optional: true
+    "@mdx-js/react":
+      optional: true
+  checksum: 968727be9c1735f441d8ac372ef67339d41d6a9b76c8d46de54f62ce67f66ce578ba45a02b901b5b5f5e99a5117e72526332659b4468f929902a4852a35e861d
+  languageName: node
+  linkType: hard
+
 "@next/swc-darwin-arm64@npm:15.5.12":
   version: 15.5.12
   resolution: "@next/swc-darwin-arm64@npm:15.5.12"
@@ -10737,6 +10754,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"remark-mdx-frontmatter@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "remark-mdx-frontmatter@npm:5.2.0"
+  dependencies:
+    "@types/mdast": ^4.0.0
+    estree-util-value-to-estree: ^3.0.0
+    toml: ^3.0.0
+    unified: ^11.0.0
+    unist-util-mdx-define: ^1.0.0
+    yaml: ^2.0.0
+  checksum: 938eae955610c15f5eb197ad22c94496e2b89c36f2311d9af7d30a6083fe2cd4145f3ad1816f0e6c4673b3ee8debb0764510f83eb943608a863fbe413ba0e37f
+  languageName: node
+  linkType: hard
+
 "remark-mdx@npm:^3.0.0":
   version: 3.1.1
   resolution: "remark-mdx@npm:3.1.1"
@@ -11647,6 +11678,7 @@ __metadata:
     "@headlessui/react": 2.2.9
     "@namnguyenthanhwork/react-snowfall-effect": ^1.0.3
     "@next/bundle-analyzer": 15.5.12
+    "@next/mdx": ^16.2.2
     "@svgr/webpack": ^8.1.0
     "@tailwindcss/forms": ^0.5.11
     "@tailwindcss/postcss": ^4.1.18
@@ -11692,9 +11724,11 @@ __metadata:
     rehype-prism-plus: ^2.0.2
     rehype-slug: ^6.0.0
     remark: ^15.0.1
+    remark-frontmatter: ^5.0.0
     remark-gfm: ^4.0.1
     remark-github-blockquote-alert: ^2.0.1
     remark-math: ^6.0.0
+    remark-mdx-frontmatter: ^5.2.0
     tailwindcss: ^4.1.18
     typescript: ^5.9.3
     unist-util-visit: ^5.1.0
@@ -12067,6 +12101,21 @@ __metadata:
   dependencies:
     "@types/unist": ^3.0.0
   checksum: e57733e1766b55c9a873a42d2f34daa211580788b1bba26af2fc22e48e147bdcff0f9a752ed2a19238864823735fbbe27a1804d6a5a22b182c23aa0191e41c12
+  languageName: node
+  linkType: hard
+
+"unist-util-mdx-define@npm:^1.0.0":
+  version: 1.1.2
+  resolution: "unist-util-mdx-define@npm:1.1.2"
+  dependencies:
+    "@types/estree": ^1.0.0
+    "@types/hast": ^3.0.0
+    "@types/mdast": ^4.0.0
+    estree-util-is-identifier-name: ^3.0.0
+    estree-util-scope: ^1.0.0
+    estree-walker: ^3.0.0
+    vfile: ^6.0.0
+  checksum: d74258e12be0f225fb768b9ed472d34eb1c8d31805d89fd1cf26f0bc29e42595a91b9ebb6feba37e20eae743227a44a1e171b416ceab0b05144440fa1c2ad6d9
   languageName: node
   linkType: hard
 

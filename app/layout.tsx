@@ -11,7 +11,7 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
-import { Snowfall } from '@namnguyenthanhwork/react-snowfall-effect';
+import { Snowfall } from '@namnguyenthanhwork/react-snowfall-effect'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -70,14 +70,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <Snowfall
         colors={['#ffffff', '#dfdbe0', '#ddf0ff', '#dfe6ff']}
-        snowflakeShape='dot'
+        snowflakeShape="dot"
         size={{ min: 1, max: 15 }}
         followMouse={true}
         snowflakeCount={60}
         wind={{ min: -0.8, max: 0.8 }}
         accumulate={false}
         melt={true}
-      // Beautiful star-shaped snowflakes with mouse interaction
       />
       <link
         rel="apple-touch-icon"

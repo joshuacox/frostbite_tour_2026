@@ -19,7 +19,7 @@ const mdxComponents = {
   ...components,
   DynamicMap, // This allows you to use <DynamicMap /> inside your .mdx files
   // ... other components like Image, CustomLink, etc.
-};
+}
 
 const defaultLayout = 'PostLayout'
 const layouts = {

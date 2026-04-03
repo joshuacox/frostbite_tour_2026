@@ -3934,7 +3934,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/leaflet@npm:^1.9.21":
+"@types/leaflet-routing-machine@npm:^3.2.9":
+  version: 3.2.9
+  resolution: "@types/leaflet-routing-machine@npm:3.2.9"
+  dependencies:
+    "@types/leaflet": ^1.9
+  checksum: 43231bd6f9d0b77e4769fbf1a4aaf3aea439238a235a75c705a5ea91e83a662187ba45e4492ec93b4766aed51dd3c1dcc6de38bd885e4f8e454686a5476fa1cb
+  languageName: node
+  linkType: hard
+
+"@types/leaflet@npm:^1.9, @types/leaflet@npm:^1.9.21":
   version: 1.9.21
   resolution: "@types/leaflet@npm:1.9.21"
   dependencies:
@@ -11718,6 +11727,7 @@ __metadata:
     "@tailwindcss/postcss": ^4.1.18
     "@tailwindcss/typography": ^0.5.19
     "@types/leaflet": ^1.9.21
+    "@types/leaflet-routing-machine": ^3.2.9
     "@types/mdx": ^2.0.13
     "@types/react": ^19.2.13
     "@typescript-eslint/eslint-plugin": ^8.54.0

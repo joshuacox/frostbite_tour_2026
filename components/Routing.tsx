@@ -3,25 +3,39 @@ import { useEffect } from 'react'
 import { useMap } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet-routing-machine'
-import 'leaflet-routing-machine/dist/leaflet-routing-machine.css'
 
-export default function Routing({ waypoints }: { waypoints: L.LatLng[] }) {
+// 1. Define the Props interface
+interface RoutingProps {
+  waypoints: L.LatLng[]
+}
+
+// 2. Apply the interface to the component
+export default function Routing({ waypoints }: RoutingProps) {
   const map = useMap()
 
   useEffect(() => {
-    if (!map || waypoints.length < 2) return
+    // Basic check to ensure we have a map and enough points
+    if (!map || !waypoints || waypoints.length < 2) return
 
+    // Create the control
     const routingControl = L.Routing.control({
       waypoints: waypoints,
-      routeWhileDragging: true,
       lineOptions: {
         styles: [{ color: '#6366f1', weight: 4 }],
         extendToWaypoints: true,
         missingRouteTolerance: 0
-      }
+      },
+      show: false, // Set to true if you want the text directions sidebar
+      addWaypoints: false,
+      routeWhileDragging: false,
     }).addTo(map)
 
-    return () => map.removeControl(routingControl)
+    // 3. Fix the "Destructor" error from earlier by using curly braces
+    return () => {
+      if (map && routingControl) {
+        map.removeControl(routingControl)
+      }
+    }
   }, [map, waypoints])
 
   return null

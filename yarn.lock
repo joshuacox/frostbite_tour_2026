@@ -2741,6 +2741,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mapbox/corslite@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@mapbox/corslite@npm:0.0.7"
+  checksum: ce943e303b660fa417fbdb0257ce6d8cc58c41dbff3a1006ac25ee550a18d66e2c80fd18c26cea78d97b7a079d4a456b906900847618f574c487ae19d0a0847c
+  languageName: node
+  linkType: hard
+
+"@mapbox/polyline@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@mapbox/polyline@npm:0.2.0"
+  bin:
+    polyline: bin/polyline.bin.js
+  checksum: 37fceafe1980881fb5f105c972470ed36f7a70ec0bd8eb30f9f7810e2277ae2effcfd74411631efb8cb26ac3401bb0af9ec1fa308ddbd85245d98e875eb901d5
+  languageName: node
+  linkType: hard
+
 "@mdx-js/esbuild@npm:^3.0.0":
   version: 3.1.1
   resolution: "@mdx-js/esbuild@npm:3.1.1"
@@ -7904,6 +7920,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"leaflet-routing-machine@npm:^3.2.12":
+  version: 3.2.12
+  resolution: "leaflet-routing-machine@npm:3.2.12"
+  dependencies:
+    "@mapbox/corslite": 0.0.7
+    "@mapbox/polyline": ^0.2.0
+    osrm-text-instructions: ^0.13.2
+  checksum: 8922dbfc631dd23f83142c8ec364b561294dcbb030a17c532bdfd77aa83c5a7124f36122ff675cae57dd69052832c2f5436c001a80bb3b6404ac2e7db0e1d3cb
+  languageName: node
+  linkType: hard
+
 "leaflet@npm:^1.9.4":
   version: 1.9.4
   resolution: "leaflet@npm:1.9.4"
@@ -9612,6 +9639,13 @@ __metadata:
     type-check: ^0.4.0
     word-wrap: ^1.2.5
   checksum: ecbd010e3dc73e05d239976422d9ef54a82a13f37c11ca5911dff41c98a6c7f0f163b27f922c37e7f8340af9d36febd3b6e9cef508f3339d4c393d7276d716bb
+  languageName: node
+  linkType: hard
+
+"osrm-text-instructions@npm:^0.13.2":
+  version: 0.13.4
+  resolution: "osrm-text-instructions@npm:0.13.4"
+  checksum: 3a50e03969f63459af805cc1c77ae78e933740c242a1086e2273593137c5b97c520e702012c5e59b4ad95a5499582aef309d8af2a418ff8730d264df0bf2fe76
   languageName: node
   linkType: hard
 
@@ -11704,6 +11738,7 @@ __metadata:
     image-size: 2.0.2
     leaflet: ^1.9.4
     leaflet-defaulticon-compatibility: ^0.1.2
+    leaflet-routing-machine: ^3.2.12
     lint-staged: ^16.2.7
     next: 15.5.12
     next-contentlayer2: 0.5.8

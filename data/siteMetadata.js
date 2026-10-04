@@ -15,16 +15,16 @@ const siteMetadata = {
   github: 'https://github.com/joshuacox',
   x: 'https://x.com/uberthoth',
   // twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
-  threads: 'https://www.threads.net',
-  instagram: 'https://www.instagram.com',
-  medium: 'https://medium.com',
-  bluesky: 'https://bsky.app/',
+  facebook: '',
+  youtube: '',
+  linkedin: '',
+  threads: '',
+  instagram: '',
+  medium: '',
+  bluesky: '',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
-  stickyNav: false,
+  stickyNav: true,
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
@@ -100,4 +100,4 @@ const siteMetadata = {
   },
 }
 
-export default siteMetadata;
+export default siteMetadata

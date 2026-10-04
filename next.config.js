@@ -1,7 +1,7 @@
-import remarkFrontmatter from 'remark-frontmatter';
-import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
-import createMDX from '@next/mdx';
-import { withContentlayer } from 'next-contentlayer2' 
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
+import createMDX from '@next/mdx'
+import { withContentlayer } from 'next-contentlayer2'
 import nexusBundleAnalyzer from '@next/bundle-analyzer'
 
 // 1. Initialize Plugins
@@ -9,7 +9,7 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
   },
-});
+})
 
 const withBundleAnalyzer = nexusBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -18,13 +18,13 @@ const withBundleAnalyzer = nexusBundleAnalyzer({
 // 2. Security Headers & Constants
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://ep2.adtrafficquality.google;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
-  frame-src giscus.app
+  frame-src giscus.app https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://ep2.adtrafficquality.google;
 `
 
 const securityHeaders = [
@@ -68,4 +68,3 @@ const nextConfig = {
 // 4. Export combined plugins
 const plugins = [withContentlayer, withBundleAnalyzer, withMDX]
 export default plugins.reduce((acc, next) => next(acc), nextConfig)
-

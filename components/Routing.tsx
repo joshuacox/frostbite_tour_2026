@@ -23,7 +23,7 @@ export default function Routing({ waypoints }: RoutingProps) {
       lineOptions: {
         styles: [{ color: '#6366f1', weight: 4 }],
         extendToWaypoints: true,
-        missingRouteTolerance: 0
+        missingRouteTolerance: 0,
       },
       show: false, // Set to true if you want the text directions sidebar
       addWaypoints: false,

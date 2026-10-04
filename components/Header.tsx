@@ -5,11 +5,13 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import SnowSwitch from './SnowSwitch'
 
 const Header = () => {
-  let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
+  let headerClass =
+    'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-6 transition-colors'
   if (siteMetadata.stickyNav) {
-    headerClass += ' sticky top-0 z-50'
+    headerClass += ' sticky top-0 z-50 backdrop-blur-md bg-white/85 dark:bg-gray-950/85'
   }
 
   return (
@@ -44,6 +46,7 @@ const Header = () => {
         </div>
         <SearchButton />
         <ThemeSwitch />
+        <SnowSwitch />
         <MobileNav />
       </div>
     </header>

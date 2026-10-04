@@ -7,7 +7,11 @@ summary: Copper Mountain, CO
 lonlat: [39.495699, -106.163804]
 ---
 
-<DynamicMap position={frontmatter.lonlat} zoom='13' style={{ height: '500px', width: '100%' }} />
+<DynamicMap position={frontmatter.lonlat} zoom="13" style={{ height: '500px', width: '100%' }} />
+
+<MountainWeather position={frontmatter.lonlat} name={frontmatter.title} />
+
+<RouteDownload position={frontmatter.lonlat} title={frontmatter.title} />
 
 <div className="-mx-2 flex flex-wrap overflow-hidden xl:-mx-2">
   <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">

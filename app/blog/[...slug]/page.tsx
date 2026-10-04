@@ -113,12 +113,52 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
 
   const Layout = layouts[post.layout || defaultLayout]
 
+  const rawLonLat = (post as unknown as { lonlat?: [number, number] | string }).lonlat
+  let tripJsonLd: Record<string, unknown> | null = null
+  if (rawLonLat) {
+    const lat = Array.isArray(rawLonLat) ? rawLonLat[0] : Number(String(rawLonLat).split(',')[0])
+    const lon = Array.isArray(rawLonLat) ? rawLonLat[1] : Number(String(rawLonLat).split(',')[1])
+    if (!isNaN(lat) && !isNaN(lon)) {
+      tripJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'TouristTrip',
+        name: `Frostbite Tour 2026: ${post.title}`,
+        description: post.summary,
+        touristType: ['Snowboarding', 'Skiing', 'Winter Mountain Touring'],
+        itinerary: {
+          '@type': 'ItemList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              item: {
+                '@type': 'TouristAttraction',
+                name: post.title,
+                geo: {
+                  '@type': 'GeoCoordinates',
+                  latitude: lat,
+                  longitude: lon,
+                },
+              },
+            },
+          ],
+        },
+      }
+    }
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {tripJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(tripJsonLd) }}
+        />
+      )}
       <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
         <MDXLayoutRenderer code={post.body.code} components={mdxComponents} toc={post.toc} />
       </Layout>
